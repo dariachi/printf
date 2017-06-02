@@ -6,7 +6,7 @@
 /*   By: dchirkin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/19 13:52:43 by dchirkin          #+#    #+#             */
-/*   Updated: 2017/06/01 16:28:36 by dchirkin         ###   ########.fr       */
+/*   Updated: 2017/06/02 09:47:10 by dchirkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int		ft_conversions(char *format, t_print *pr, va_list *all)
 		ft_sc(pr, all);
 	}
 	else if(*format == '%')
-		ft_protsent(pr, format);
+		ft_protsent(pr);
 	else
 		return(0);
 	return(1);

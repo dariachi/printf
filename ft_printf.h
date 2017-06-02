@@ -6,7 +6,7 @@
 /*   By: dchirkin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/19 13:49:16 by dchirkin          #+#    #+#             */
-/*   Updated: 2017/06/01 16:38:14 by dchirkin         ###   ########.fr       */
+/*   Updated: 2017/06/02 09:51:29 by dchirkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int     ft_struct(char *format, t_print *pr);
 void    ft_print_uxo(t_print *pr, char *t);
 void    ft_printf_d(char z, char *arr, t_print *pr, intmax_t max);
 void        ft_print_s(char *dl, t_print *pr, char *d);
-void    ft_unicode_c(t_print *pr,  intmax_t uc);
+void    ft_unicode_c( intmax_t uc);
 void    ft_type_unis(t_print *pr, va_list *all);
 void    ft_transl_two(intmax_t uc);
 void    ft_transt_three(intmax_t uc);

@@ -6,7 +6,7 @@
 /*   By: dchirkin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 15:08:46 by dchirkin          #+#    #+#             */
-/*   Updated: 2017/06/01 16:32:13 by dchirkin         ###   ########.fr       */
+/*   Updated: 2017/06/02 09:50:14 by dchirkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,23 +89,23 @@ void		ft_type_s(t_print *pr, va_list *all)
 	ft_print_s(dl, pr, d);
 }
 
-void		ft_unicode_c(t_print *pr, intmax_t uc)
+void		ft_unicode_c(intmax_t uc)
 {
 	if (uc <= 0x0000007F)
 		ft_putchar((char)uc);
 	else if (uc <= 0x000007FF)
-		ft_transl_two(uc, pr);
+		ft_transl_two(uc);
 	else if (uc <= 0x0000FFFF)
-		ft_transt_three(uc, pr);
+		ft_transt_three(uc);
 	else if (uc <= 0x001FFFFF)
-		ft_trans_four(uc, pr);
+		ft_trans_four(uc);
 	else if (uc <= 0x03FFFFFF)
 		ft_trans_five(uc);
 	else if (uc <= 0x7FFFFFFF)
 		ft_trans_six(uc);
 }
 
-void		ft_unic_char_c(t_print *pr, va_list *all)
+void		ft_unic_char_c(va_list *all)
 {
 	intmax_t	uc;
 //	int			bit;
@@ -115,11 +115,11 @@ void		ft_unic_char_c(t_print *pr, va_list *all)
 	if (uc <= 0x0000007F)
 		ft_putchar(uc);
 	else if (uc <= 0x000007FF)
-		ft_transl_two(uc, pr);
+		ft_transl_two(uc);
 	else if (uc <= 0x0000FFFF)
-		ft_transt_three(uc, pr);
+		ft_transt_three(uc);
 	else if (uc <= 0x001FFFFF)
-		ft_trans_four(uc, pr);
+		ft_trans_four(uc);
 	else if (uc <= 0x03FFFFFF)
 		ft_trans_five(uc);
 	else if (uc <= 0x7FFFFFFF)
@@ -130,7 +130,7 @@ void		ft_sc(t_print *pr, va_list *all)
 {
 	if (pr->type == 'C' || (pr->type == 'c' && pr->l == 1))
 	{
-		ft_unic_char_c(pr, all);
+		ft_unic_char_c(all);
 	}
 	else if (pr->type == 'c')
 		ft_type_c(pr, all);

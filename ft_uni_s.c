@@ -6,7 +6,7 @@
 /*   By: dchirkin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/27 18:17:34 by dchirkin          #+#    #+#             */
-/*   Updated: 2017/06/01 16:33:19 by dchirkin         ###   ########.fr       */
+/*   Updated: 2017/06/02 09:53:15 by dchirkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void		ft_print_sc_uni(wchar_t *str, t_print *pr, char *d, int i)
 	{
 		while (*str != '\0' && i > 0)
 		{
-			ft_unicode_c(pr, *str);
+			ft_unicode_c(*str);
 			str++;
 			i--;
 		}
@@ -43,7 +43,7 @@ void		ft_print_sc_uni(wchar_t *str, t_print *pr, char *d, int i)
 		ft_putstr(d);
 		while (*str != '\0' && i > 0)
 		{
-			ft_unicode_c(pr, *str);
+			ft_unicode_c(*str);
 			str++;
 			i--;
 		}
